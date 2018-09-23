@@ -7,6 +7,11 @@
     width: 80%;
     /* background-color: aqua; */
     margin: 0 auto;
+    z-index: 6;
+}
+
+.nav-container-mob {
+    z-index: 60;
 }
 
 .nav-container::after {
@@ -25,7 +30,6 @@ nav {
     font-family: 'VT323', monospace;
     text-transform: uppercase;
     margin: auto 0;
-    /* background-color: aqua; */
 }
 
 .nav-title img{
@@ -82,4 +86,25 @@ nav li::before{
 
 nav li:hover::before{
     width: 100%;
+}
+
+.k-bars {
+    padding: 2px 14px;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    background-color: #f4eef7;
+}
+.k-bars:focus {
+    outline: none;
+}
+
+.k-bar-item {
+    display: block;
+}
+
+.k-sidebar{
+    width: 80%;
+    background-color: #f4eef7;
+    z-index: 5;
 }
