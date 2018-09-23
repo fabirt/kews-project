@@ -1,0 +1,37 @@
+
+header{
+    cursor: default;
+    width: 100%;
+    height: 92vh;
+    background-image: url('./../assets/Landing.png');
+}
+
+h1 {
+    font-family: 'Quicksand', 'Raleway', sans-serif;
+}
+span {
+    font-family: 'VT323', monospace;
+    font-size: 130px;
+}
+
+.k-container{
+    position: relative;
+    top: 40px;
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px 20px;
+    background-color: #0a011dbd;
+    border-radius: 8px;
+}
+
+img {
+    width: 100%;
+}
+
+.title {
+    color: #f4eef7;
+    margin: auto 0;
+}
+.title p{
+    color: #f4eef7d0;
+}

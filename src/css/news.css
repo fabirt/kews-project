@@ -1,0 +1,29 @@
+
+section{
+    width: 80%;
+    margin: 20px auto;
+    background-color: #0a011dce;
+    padding: 20px 26px;
+    border-radius: 8px;
+}
+
+.k-news-container{
+    margin: 0;
+    padding: 20px;
+    background-image: url('./../assets/Landing.png');
+    background-attachment: fixed;
+}
+
+.k-item-title {
+    color: #f4eef7;
+}
+
+.k-item-description {
+    color: #f4eef7d0;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.k-item-img {
+    border-radius: 4px;
+}
