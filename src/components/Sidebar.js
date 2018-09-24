@@ -14,15 +14,15 @@ class Sidebar extends Component {
         <div>
             {/* Sidebar  */}
             <div className="w3-sidebar w3-animate-left w3-bar-block w3-border-right k-sb" style={{display:this.props.sbDisplay}} ref="mySidebar">
-                <NavLink to="/" className="k-sb-item">
+                <NavLink to="/kews-project/" className="k-sb-item">
                     <i className="fa fa-home" ></i>
                     <span>Home</span>
                 </NavLink>
-                <NavLink to="/news" className="k-sb-item">
+                <NavLink to="/kews-project/news" className="k-sb-item">
                     <i className="fas fa-newspaper"></i>
                     <span>News</span>
                 </NavLink>
-                <NavLink to="/contact" className="k-sb-item">
+                <NavLink to="/kews-project/contact" className="k-sb-item">
                     <i className="fas fa-envelope"></i>
                     <span>Contact</span>
                 </NavLink>

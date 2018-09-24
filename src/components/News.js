@@ -32,7 +32,7 @@ class News extends Component {
                                 <img src={item.urlToImage} alt="Photo" className="k-item-img"/>    
                             </div>
                             <div className="k-info col-lg-8">
-                                <p className="h2 k-item-title">{item.title}</p>
+                                <p className="h3 k-item-title">{item.title}</p>
                                 <p className="k-item-description">{item.description}</p>
                             </div>
                             </div>

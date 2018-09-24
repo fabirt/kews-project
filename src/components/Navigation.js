@@ -27,9 +27,9 @@ class Navigation extends Component {
                 </div>
                 <nav className="k-top-nav">
                     <ul>
-                        <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/news'>News</NavLink></li>
-                        <li><NavLink to='/contact'>Contact</NavLink></li>
+                        <li><NavLink to='/kews-project/'>Home</NavLink></li>
+                        <li><NavLink to='/kews-project/news'>News</NavLink></li>
+                        <li><NavLink to='/kews-project/contact'>Contact</NavLink></li>
                     </ul>
                 </nav>
             </div>

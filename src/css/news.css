@@ -8,6 +8,7 @@ section{
 }
 
 .k-news-container{
+    height: auto;
     margin: 0;
     padding: 20px;
     background-image: url('./../assets/Landing.png');
@@ -16,11 +17,13 @@ section{
 
 .k-inner-container{
     position: relative;
-    top: 40px;
+    padding-top: 35px;
+    top: 0px;
 }
 
 .k-item-title {
     color: #f4eef7;
+    text-align: justify;
 }
 
 .k-item-description {
@@ -31,4 +34,10 @@ section{
 
 .k-item-img {
     border-radius: 4px;
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        width: 100%;
+    }
 }
