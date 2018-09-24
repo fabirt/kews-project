@@ -23,22 +23,23 @@ class News extends Component {
   render() {
     return (
         <div className="k-news-container">
-            {
-                this.state.news.map(item =>{
-                    return <section>
-                        <div className="row">
-                        <div className="k-image col-lg-4">
-                            <img src={item.urlToImage} alt="Photo" className="k-item-img"/>    
-                        </div>
-                        <div className="k-info col-lg-8">
-                            <p className="h2 k-item-title">{item.title}</p>
-                            <p className="k-item-description">{item.description}</p>
-                        </div>
-                        </div>
-                    </section>
-                })
-            }
-            
+            <div className="k-inner-container">
+                {
+                    this.state.news.map((item, i) =>{
+                        return <section key={i}>
+                            <div className="row">
+                            <div className="k-image col-lg-4">
+                                <img src={item.urlToImage} alt="Photo" className="k-item-img"/>    
+                            </div>
+                            <div className="k-info col-lg-8">
+                                <p className="h2 k-item-title">{item.title}</p>
+                                <p className="k-item-description">{item.description}</p>
+                            </div>
+                            </div>
+                        </section>
+                    })
+                }
+            </div>
         </div>
     );
   }

@@ -1,0 +1,19 @@
+.k-sb-item {
+    display: block;
+}
+/* f4eef7 */
+.k-sb {
+    width: 80%;
+    background-color: #d30505;
+    z-index: 4;
+}
+
+.k-sb-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed!important;
+    overflow: auto;
+    display: none;
+    z-index: 2;
+    background-color:rgba(0,0,0,0.5);
+}

@@ -14,6 +14,11 @@ section{
     background-attachment: fixed;
 }
 
+.k-inner-container{
+    position: relative;
+    top: 40px;
+}
+
 .k-item-title {
     color: #f4eef7;
 }

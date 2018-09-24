@@ -2,7 +2,7 @@
 header{
     cursor: default;
     width: 100%;
-    height: 92vh;
+    height: 100vh;
     background-image: url('./../assets/Landing.png');
 }
 
@@ -16,7 +16,7 @@ span {
 
 .k-container{
     position: relative;
-    top: 40px;
+    top: 100px;
     width: 80%;
     margin: 0px auto;
     padding: 10px 20px;
