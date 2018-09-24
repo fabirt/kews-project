@@ -17,8 +17,8 @@ class Landing extends Component {
                             Your best place to connect with the world
                         </p>
                     </div>
-                    <div className="col-lg-6">
-                        <img src={pet} className="" alt="Pet"/>
+                    <div className="col-lg-6 k-pet-container">
+                        <img src={pet} className="k-pet" alt="Pet"/>
                     </div>
                 </div>
                 

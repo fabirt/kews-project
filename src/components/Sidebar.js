@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './../css/sidebar.css';
 class Sidebar extends Component {
     constructor(props) {
@@ -13,15 +14,18 @@ class Sidebar extends Component {
         <div>
             {/* Sidebar  */}
             <div className="w3-sidebar w3-animate-left w3-bar-block w3-border-right k-sb" style={{display:this.props.sbDisplay}} ref="mySidebar">
-                <a className="k-sb-item">
-                    Home
-                </a>
-                <a className="k-sb-item">
-                    News
-                </a>
-                <a className="k-sb-item">
-                    Contact
-                </a>
+                <NavLink to="/" className="k-sb-item">
+                    <i className="fa fa-home" ></i>
+                    <span>Home</span>
+                </NavLink>
+                <NavLink to="/news" className="k-sb-item">
+                    <i className="fas fa-newspaper"></i>
+                    <span>News</span>
+                </NavLink>
+                <NavLink to="/contact" className="k-sb-item">
+                    <i className="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </NavLink>
             </div>
             {/* Overlay  */}
             <div className="k-sb-overlay" ref="myOverlay" style={{display:this.props.sbDisplay}}></div>

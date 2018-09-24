@@ -1,10 +1,13 @@
 .k-sb-item {
     display: block;
+    cursor: default;
+    padding: 15px 25px;
+    /* background-color: aqua; */
 }
 /* f4eef7 */
 .k-sb {
     width: 80%;
-    background-color: #d30505;
+    background-color: #d8cadf;
     z-index: 4;
 }
 
@@ -16,4 +19,23 @@
     display: none;
     z-index: 2;
     background-color:rgba(0,0,0,0.5);
+}
+
+.k-sb-item span {
+    margin-left: 25px;
+}
+
+.k-sb-item:active {
+    background-color: #bfa6cc;
+    color: #9b59b6;
+}
+.k-sb-item:active > i {
+    color: #9b59b6;
+}
+.k-sb-item:active > span {
+    color: #9b59b6;
+}
+.k-sb-item:hover {
+    text-decoration: none;
+    color: black;
 }

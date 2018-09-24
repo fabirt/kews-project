@@ -2,6 +2,8 @@
 header{
     cursor: default;
     width: 100%;
+    position: relative;
+    margin: auto auto;
     height: 100vh;
     background-image: url('./../assets/Landing.png');
 }
@@ -9,7 +11,7 @@ header{
 h1 {
     font-family: 'Quicksand', 'Raleway', sans-serif;
 }
-span {
+h1 span {
     font-family: 'VT323', monospace;
     font-size: 130px;
 }
@@ -34,4 +36,35 @@ img {
 }
 .title p{
     color: #f4eef7d0;
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        height: auto;
+        background-attachment: fixed;
+    }
+    .k-container{
+        width: 100%;
+        top: 0px;
+        margin: 0 0;
+        padding: 0px 30px;
+        background-color: #0a011d54;
+        border-radius: 0px;
+    }
+    .title {
+        margin: 50px 0;
+    }
+    .title .display-1, .display-1 span {
+        font-size: 70px;
+    }
+    .k-pet-container {
+        padding-bottom: 30px;
+    }
+    .k-pet {
+        position: relative;
+        display: block;
+        
+        margin-right: auto;
+        width:70%;
+    }
 }
