@@ -1,0 +1,32 @@
+
+.k-mobile-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.k-mobile-nav ul {
+    margin: 0;
+    padding: 0;
+    background-color: brown;
+}
+
+.k-mobile-nav li{
+    display: inline-block;
+    background-color: #f4eef7;
+    width: 33.33%;
+}
+
+.k-mobile-nav a {
+    padding: 5px 0;
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.k-mobile-nav a:hover {
+    text-decoration: none;
+    color: #000;
+}

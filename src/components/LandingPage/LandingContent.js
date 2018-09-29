@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './../css/landing.css';
-import pet from './../assets/koala_pet.png';
+import './../../css/LandingPage/LandingContent.css';
+import pet from './../../assets/koala_pet.png';
 
 class Landing extends Component {
   render() {
     return (
-      <div className="">
+      <div>
         <header>
             <div className="k-container">
                 <div className="row">
@@ -13,7 +13,7 @@ class Landing extends Component {
                         <h1 className="display-1">
                             Welcome to <span>KEWS</span>
                         </h1>
-                        <p className="h1">
+                        <p className="k-description">
                             Your best place to connect with the world
                         </p>
                     </div>
