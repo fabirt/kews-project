@@ -16,6 +16,7 @@ class Router extends Component {
                     <Route exact path='/kews-project/' component={Landing}></Route>
                     <Route exact path='/kews-project/news' component={News}></Route>
                     <Route exact path='/kews-project/contact' component={Contact}></Route>
+                    <Route component={Landing}/>
                 </Switch>
             </div>
         </BrowserRouter>
