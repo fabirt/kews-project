@@ -1,48 +1,52 @@
 import React, { Component } from 'react';
-import './../../css/news.css'
+import NewsContent from './NewsContent';
+import NewsTop from './NewsTop';
 
 class News extends Component {
-
-    state={
-        news:[]
+    constructor(){
+        super();
+        this.state = {
+            news: [],
+            search: 'anime'
+        }
     }
-      
-    getanime= async (url)=>{
+
+    handleSearch = (value) => {
+        this.setState({search: value})
+        setTimeout(() => {
+            console.log(this.state.search);
+            this.newSearch();
+        }, 100) 
+    }
+
+    getArticles= async (url)=>{
         const resp=await fetch(url)
         const newsObj=await resp.json()
         return newsObj
     }
         
     async componentDidMount(){
-        const url = 'https://newsapi.org/v2/everything?q=%27anime%20%27&language=en&apiKey=60a49976bbd7461fabb075d1d4c35371';
-        const {articles}= await this.getanime(url);
+        let url = "https://newsapi.org/v2/everything?q=%27{mySearch}%20%27&language=en&apiKey=60a49976bbd7461fabb075d1d4c35371";
+        url = url.replace("{mySearch}", this.state.search);
+        const {articles}= await this.getArticles(url);
         this.setState({news:articles})
-        // console.log("Premisa",articles) 
     }
 
-  render() {
-    return (
-        <div className="k-news-container">
-            <div className="k-inner-container">
-                {
-                    this.state.news.map((item, i) =>{
-                        return <section key={i}>
-                            <div className="row">
-                            <div className="k-image col-lg-4">
-                                <img src={item.urlToImage} alt="Photo" className="k-item-img"/>    
-                            </div>
-                            <div className="k-info col-lg-8">
-                                <p className="h3 k-item-title">{item.title}</p>
-                                <p className="k-item-description">{item.description}</p>
-                            </div>
-                            </div>
-                        </section>
-                    })
-                }
+    async newSearch(){
+        let url = "https://newsapi.org/v2/everything?q=%27{mySearch}%20%27&language=en&apiKey=60a49976bbd7461fabb075d1d4c35371";
+        url = url.replace("{mySearch}", this.state.search);
+        const {articles}= await this.getArticles(url);
+        this.setState({news:articles})
+    }
+
+    render() {
+        return (
+            <div>
+                <NewsTop handleSearch={this.handleSearch.bind(this)}/>
+                <NewsContent newsProp={this.state.news} />
             </div>
-        </div>
-    );
-  }
+        );
+    }
 }
 
 export default News;
