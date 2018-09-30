@@ -5,16 +5,19 @@ class NewsTop extends Component {
     constructor(){
         super();
         this.state = {
-            search: ''
+            search: ""
         }
     }
 
     handleChange = (event) => {
-        this.setState({search: event.target.value})
+        let value = event.target.value;
+        value = value.replace(" ", "%20");
+        this.setState({search: value})
     }
 
     handleSubmit = (event) => {
-        this.props.handleSearch(this.state.search);
+        const value = (this.state.search==="") ? "anime" : this.state.search;
+        this.props.handleSearch(value);
         event.preventDefault();
     }
 

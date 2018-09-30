@@ -7,15 +7,15 @@ class News extends Component {
         super();
         this.state = {
             news: [],
-            search: 'anime'
+            search: 'technology',
+            loading: true
         }
     }
 
     handleSearch = (value) => {
-        this.setState({search: value})
+        this.setState({search: value, loading:true})
         setTimeout(() => {
-            console.log(this.state.search);
-            this.newSearch();
+            this.componentDidMount();
         }, 100) 
     }
 
@@ -26,23 +26,19 @@ class News extends Component {
     }
         
     async componentDidMount(){
-        let url = "https://newsapi.org/v2/everything?q=%27{mySearch}%20%27&language=en&apiKey=60a49976bbd7461fabb075d1d4c35371";
+        let url = "https://newsapi.org/v2/everything?q={mySearch}&language=en&sortBy=popularity&apiKey=60a49976bbd7461fabb075d1d4c35371";
         url = url.replace("{mySearch}", this.state.search);
         const {articles}= await this.getArticles(url);
-        this.setState({news:articles})
-    }
-
-    async newSearch(){
-        let url = "https://newsapi.org/v2/everything?q=%27{mySearch}%20%27&language=en&apiKey=60a49976bbd7461fabb075d1d4c35371";
-        url = url.replace("{mySearch}", this.state.search);
-        const {articles}= await this.getArticles(url);
-        this.setState({news:articles})
+        this.setState({news:articles, loading:false})
     }
 
     render() {
         return (
             <div>
                 <NewsTop handleSearch={this.handleSearch.bind(this)}/>
+                {this.state.loading &&<div className="k-loading">
+                    <i className="fas fa-spinner fa-5x fa-spin"></i>
+                </div>}
                 <NewsContent newsProp={this.state.news} />
             </div>
         );

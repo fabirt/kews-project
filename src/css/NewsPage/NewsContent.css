@@ -36,6 +36,24 @@ section{
     border-radius: 4px;
 }
 
+.k-item-time {
+    color: #f4eef7d0; 
+    display: inline;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #9b59b6;
+}
+
+.k-item-url {
+    color: #f4eef7d0;
+    float: right;
+    font-size: 20px;
+}
+
+.k-item-url:active, .k-item-url:visited, .k-item-url:hover {
+    color: #f4eef7d0;
+}
+
 @media only screen and (max-width: 900px) {
     section {
         width: 100%;
